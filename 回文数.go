@@ -33,14 +33,13 @@ func isPalindrome01(x int) bool {
 // @solution-sync:end
 
 // @solution-sync:begin
-// 解题思路：
-// 1. 根据回文数特点，负数不可能，判断后提前返回
-// 2. 将数字转为字符串，然后对字符串进行遍历对比
 func isPalindrome02(x int) bool {
+	// 根据回文数特点，负数不可能，判断后提前返回
 	if x < 0 {
 		return false
 	}
 
+	// 将数字转为字符串，然后对字符串进行遍历对比
 	str := strconv.Itoa(x)
 	l := len(str)
 	for i := 0; i < l/2; i++ {
@@ -53,6 +52,15 @@ func isPalindrome02(x int) bool {
 
 // @solution-sync:end
 
+/*
+给你一个整数 x ，如果 x 是一个回文整数，返回 true ；否则，返回 false 。
+
+回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。例如，121 是回文，而 123 不是。
+
+示例 1：
+输入：x = 121
+输出：true
+*/
 func main() {
 	var x = 121
 

@@ -12,11 +12,7 @@ func isValid(s string) bool {
 	}
 
 	// 定义有效括号映射，用于判断是左括号还是右括号
-	pairs := map[byte]byte{
-		')': '(',
-		'}': '{',
-		']': '[',
-	}
+	pairs := map[byte]byte{')': '(', '}': '{', ']': '['}
 
 	var stacks []byte
 	for _, v := range s {
@@ -41,6 +37,18 @@ func isValid(s string) bool {
 
 // @solution-sync:end
 
+/*
+给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串 s ，判断字符串是否有效。
+
+有效字符串需满足：
+
+左括号必须用相同类型的右括号闭合。
+左括号必须以正确的顺序闭合。
+
+示例 1：
+输入：s = "()"
+输出：true
+*/
 func main() {
 	var s = "()"
 
